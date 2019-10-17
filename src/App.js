@@ -1,5 +1,13 @@
 import React from 'react';
 
+const doIncrement = (prevState) => ({
+    counter: prevState.counter + 1
+})
+
+const doDecrement = (prevState) => ({
+    counter: prevState.counter - 1
+})
+
 const App = class extends React.Component {
     constructor(props){
         super(props);
@@ -10,14 +18,10 @@ const App = class extends React.Component {
         this.onDecrement = this.onDecrement.bind(this);
     }
     onIncrement(){
-        this.setState((prevState)=>({
-            counter: prevState.counter + 1
-        }));
+        this.setState(doIncrement);
     }
     onDecrement(){
-        this.setState((prevState)=>({
-            counter: prevState.counter - 1
-        }));
+        this.setState(doDecrement);
     }
     render(){
         const {counter} = this.state;
