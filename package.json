@@ -6,7 +6,7 @@
   "scripts": {
     "devserver": "webpack-dev-server --watch",
     "test:unit": "mocha --require @babel/register --require ./test/helpers.js --require ./test/dom.js 'src/**/*.spec.js'",
-    "test:unit:watch": "npm run test:unit --watch"
+    "test:unit:watch": "npm run test:unit -- --watch"
   },
   "keywords": [],
   "author": "",
