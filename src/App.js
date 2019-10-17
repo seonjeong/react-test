@@ -28,7 +28,7 @@ const App = class extends React.Component {
         return (
             <div>
                 <h1>My Counter</h1>
-                <p>{counter}</p>
+                <Counter counter={counter} />
 
                 <button type="button" onClick={this.onIncrement}>Increment</button>
                 <button type="button" onClick={this.onDecrement}>Decrement</button>
@@ -36,5 +36,7 @@ const App = class extends React.Component {
         )
     }
 }
+
+export const Counter = ({counter}) => <p>{counter}</p>
 
 export default App;
